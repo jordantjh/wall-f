@@ -8,7 +8,7 @@ export const SystemMessageRenderer: React.FunctionComponent<ISystemMessageRender
   message
 }) => {
   return (
-    <div style={{ padding: "0.9rem 1.4rem" }}>
+    <div style={{ padding: "1.2rem 0" }}>
       "{message}"
     </div>
   );

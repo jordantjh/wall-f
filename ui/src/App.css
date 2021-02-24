@@ -17,6 +17,11 @@
   align-items: center;
 }
 
+.fruit-decorator-container {
+  padding: 1rem 0;
+  letter-spacing: 0.2rem;
+}
+
 .input-panel-loader {
   position: absolute;
   display: flex;

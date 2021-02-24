@@ -10,11 +10,11 @@ export const StateIndicatorRenderer: React.FunctionComponent<IStateIndicatorRend
   state
 }) => {
   return (
-    <Row style={{ padding: "0.9rem 1.4rem" }} align="middle">
-      <div>State:</div>
-      <div style={{ fontWeight: "bold", marginLeft: "0.2rem", fontSize: "1.5rem" }}>
+    <div style={{ padding: "1.2rem 0" }}>
+      <span style={{}}>State:</span>
+      <span style={{ fontWeight: "bold", marginLeft: "0.2rem", fontSize: "1.8rem" }}>
         {state}
-      </div>
-    </Row>
+      </span>
+    </div>
   );
 }

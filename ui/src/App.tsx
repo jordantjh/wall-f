@@ -137,7 +137,7 @@ function App() {
           <small>The Fruit-Picking Robot</small>
         </Header>
         <Content className="app-content">
-          🍎🍌🍍🥝🍑
+          <div className="fruit-decorator-container">🍎🍌🍍🥝🍑</div>
           <StateIndicator state={robotState} />
           <Spin spinning={robotIsLoading}>
             <WallF state={robotState} />

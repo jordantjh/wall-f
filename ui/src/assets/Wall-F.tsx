@@ -22,7 +22,7 @@ export const WallF: React.FunctionComponent<IWallFProps> = ({
    return (
       <svg version="1.1" id="Layer_1" x="0px" y="0px"
          viewBox="0 0 512 512"
-         width="120" height="120" xmlSpace="preserve">
+         width="140" height="140" xmlSpace="preserve">
          <g>
             <g>
                <g>
