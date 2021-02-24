@@ -1,0 +1,2 @@
+1. Would add logging instead of console log in production
+2. 

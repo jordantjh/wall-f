@@ -1,0 +1,58 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.app-header p{
+  font-size: 3.8rem;
+  background-color: "tomato";
+  margin-bottom: 0;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-panel-loader {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  width: 65%;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .input-panel-loader {
+    width: 75%;
+  }
+}
+
+/********************
+Ant Design Overrides
+********************/
+.ant-layout-header {
+  /* Overwrite antd */
+  background-color: white;
+  line-height: normal;
+  height: 9rem;
+}
+
+.ant-btn {
+  transition: color 0.1s, border 0.1s;
+}
+
+.ant-btn:hover,
+.ant-btn:focus {
+  color: #12522d;
+  border: 4.0px solid #12522d;
+}
+
+.ant-spin-dot-item {
+  background-color: #3498db;
+}

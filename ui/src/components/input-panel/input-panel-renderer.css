@@ -1,0 +1,13 @@
+.input-button {
+  width: 65%;
+  margin-top: 0.35rem;
+  height: 2.7rem;
+  font-weight: 700;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .input-button {
+    width: 75%;
+  }
+}

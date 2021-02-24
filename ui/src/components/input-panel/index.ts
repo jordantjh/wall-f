@@ -1,0 +1,1 @@
+export { InputPanelRenderer as InputPanel } from "./input-panel-renderer";
