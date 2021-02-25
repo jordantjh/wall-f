@@ -1,15 +1,8 @@
 # Wall-F: The Fruit-Picking Robot
 
-Frontend tech stack: React, TypeScript, HTML, CSS, JavaScript
+Frontend technologies: React, TypeScript, HTML, CSS, JavaScript
 
 ## Environment Setup
-### Frontend
-1. Inside "ui" directory, execute in command line
-  ```
-  npm start
-  ```
-2. Visit http://localhost:3000 on your favourite web browser. 
-
 ### Backend
 1. Inside "robot" directory, create a virtual environment
    ```
@@ -23,9 +16,17 @@ Frontend tech stack: React, TypeScript, HTML, CSS, JavaScript
    pip install -r requirements.txt
    ```
 
-You can exit the virtual environment later with _deactivate_
+  You can exit the virtual environment later with _deactivate_
 
 4. Start the server
+    ```
+    python robot.py
+    ```
+
+### Frontend
+1. Inside "ui" directory, execute in command line
   ```
-  python robot.py
+  npm start
   ```
+2. Visit http://localhost:3000 on your favourite web browser. 
+
