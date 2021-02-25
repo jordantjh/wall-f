@@ -14,8 +14,6 @@ export const InputPanelRenderer: React.FunctionComponent<IInputPanelRendererProp
   state, failedTimes, onActionClick, appIsLoading
 }) => {
   return (
-    // <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-    // <div style={{ backgroundColor: "thistle", width: "100%", display: "flex" }}>
     <div style={{ display: "flex", flex: 1 }}>
       <Button className="input-button" onClick={() => onActionClick(Command.start)} disabled={state !== RobotState.Idle || appIsLoading}>Start</Button>
       <Button className="input-button" onClick={() => onActionClick(Command.place)} disabled={state !== RobotState.Picking || appIsLoading}>Place</Button>

@@ -11,7 +11,7 @@ export const StateIndicatorRenderer: React.FunctionComponent<IStateIndicatorRend
 }) => {
   return (
     <div style={{ padding: "1.2rem 0" }}>
-      <span style={{}}>State:</span>
+      <span>State:</span>
       <span style={{ fontWeight: "bold", marginLeft: "0.2rem", fontSize: "1.8rem" }}>
         {state}
       </span>

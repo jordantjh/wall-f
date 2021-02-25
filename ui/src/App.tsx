@@ -112,6 +112,8 @@ function App() {
       }
 
       // would do logging instead in production
+      // by making a POST request to the backend
+      // and the backend will log the error to a file
       else {
         console.log(`Action HTTP request failed: ${error}`);
       }
