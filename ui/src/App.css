@@ -49,13 +49,22 @@ Ant Design Overrides
 }
 
 .ant-btn {
-  transition: color 0.1s, border 0.1s;
+  /* transition: color 0.1s, border 0.1s; */
+  transition: background-color 0.2s, color 0.1s, font-size 0.1s, border 0.1s, transform 0.2s;
 }
 
 .ant-btn:hover,
 .ant-btn:focus {
-  color: #12522d;
-  border: 4.0px solid #12522d;
+  /* color: #12522d;
+  border: 4.0px solid #12522d; */
+  background-color: #feca57;  /* #f1c40f; #12522d; */
+  color: #fff;
+  font-size: 1rem;
+  border: 1px solid #feca57;
+}
+
+.ant-btn:active {
+  transform: scale(0.92, 0.92);
 }
 
 .ant-spin-dot-item {
