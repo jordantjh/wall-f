@@ -1,5 +1,4 @@
 import React from "react";
-import { Row } from "antd";
 import { RobotState } from "../../enums";
 
 interface IStateIndicatorRendererProps {
