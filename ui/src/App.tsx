@@ -4,6 +4,7 @@ import { Spin } from "antd";
 import "antd/dist/antd.css";
 import "./App.css";
 import * as constants from "./constants";
+import { getTimeStamp } from "./app-util";
 import { Command, RobotState } from "./enums";
 import { ICommandRecord } from "./interfaces";
 import { Layout } from "antd";
@@ -36,17 +37,6 @@ function App() {
 
   const onDrawerClose = () => {
     setDrawerVisible(false);
-  }
-
-  const getTimeStamp = () => {
-    const now = new Date();
-
-    // prepend '0' to single-digit numbers
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-
-    return `${hours}:${minutes}:${seconds}`;
   }
 
   const onActionClick = (action: Command, shouldSetInitialSystemMessage = true) => {
