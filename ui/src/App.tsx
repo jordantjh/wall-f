@@ -7,7 +7,8 @@ import * as constants from "./constants";
 import { Command, RobotState } from "./enums";
 import { ICommandRecord } from "./interfaces";
 import { Layout } from "antd";
-import { WallF } from "./assets/Wall-F";
+import { ScoreDisplay } from "./components/score-display";
+import { WallS } from "./assets/Wall-S";
 import { StateIndicator } from "./components/state-indicator";
 import { FloatButton } from "./components/float-button";
 import { CommandHistory } from "./components/command-history";
@@ -15,12 +16,19 @@ import { SystemMessage } from "./components/system-message";
 import { InputPanel } from "./components/input-panel";
 
 function App() {
-  const [systemMessage, setSystemMessage] = React.useState("System Wall-F is ready.");
+  const [systemMessage, setSystemMessage] = React.useState("System Wall-S is ready.");
   const [robotState, setRobotState] = React.useState(RobotState.Idle);
   const [drawerVisible, setDrawerVisible] = React.useState(false);
   const [failedTimes, setFailedTimes] = React.useState(0);
   const [robotIsLoading, setRobotIsLoading] = React.useState(false);
   const [commandHistory, setCommandHistory] = React.useState([] as ICommandRecord[]);
+
+  /**
+   * extra features just for fun
+   */
+  const [lollipopCount, setLollipopCount] = React.useState(0);
+  const [candyCount, setCandyCount] = React.useState(0);
+  const [dangoCount, setDangoCount] = React.useState(0);
 
   const showDrawer = () => {
     setDrawerVisible(true);
@@ -80,6 +88,22 @@ function App() {
           break;
         case "PICKING":
           setRobotState(RobotState.Picking);
+
+          /**
+           * extra features just for fun
+           */
+          const sweetsPick = Math.random();
+          if (sweetsPick <= 0.333) {
+            setLollipopCount(lollipopCount + 1);
+            endingSystemMessage = "Wall-S picked up a lollipop!";
+          } else if (sweetsPick <= 0.667) {
+            setCandyCount(candyCount + 1);
+            endingSystemMessage = "Wall-S picked up a candy!";
+          } else {
+            setDangoCount(dangoCount + 1);
+            endingSystemMessage = "Wall-S picked up a dango!";
+          }
+
           break;
         case "PLACING":
           setRobotState(RobotState.Placing);
@@ -107,7 +131,7 @@ function App() {
 
       // handle 503: auto retry 
       else if (status === 503) {
-        endingSystemMessage = "Wall-F did not respond. Retrying...";
+        endingSystemMessage = "Wall-S did not respond. Retrying...";
         shouldRetryCommand = true;
       }
 
@@ -135,14 +159,19 @@ function App() {
     <>
       <Layout>
         <Header className="app-header">
-          <p>Wall-F</p>
-          <small>The Fruit-Picking Robot</small>
+          <p>Wall-S</p>
+          <small>World's First Sweets-Picking Robot</small>
         </Header>
         <Content className="app-content">
-          <div className="fruit-decorator-container">🍎🍌🍍🥝🍑</div>
+          {/* <div className="fruit-decorator-container">🍎🍌🍍🥝🍑</div> */}
+          <ScoreDisplay
+            candyCount={candyCount}
+            lollipopCount={lollipopCount}
+            dangoCount={dangoCount}
+          />
           <StateIndicator state={robotState} />
           <Spin spinning={robotIsLoading}>
-            <WallF state={robotState} />
+            <WallS state={robotState} />
           </Spin>
           <SystemMessage message={systemMessage} />
         </Content>

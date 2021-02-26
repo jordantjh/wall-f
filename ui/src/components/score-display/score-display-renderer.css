@@ -1,0 +1,61 @@
+.score-display-container {
+  padding: 0.6rem 0;
+  display: flex;
+  font-size: 1.3rem;
+  background-color: #fff;
+  border-radius: 1.3rem;
+  /* border-bottom: 2px solid #2ecc71; */
+  border-bottom: 2px solid #fc73c4;
+  width: 20rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 448px) {
+  .score-display-container {
+    width: 16rem;
+  }
+}
+
+.score-display-container > div {
+  margin-left: 2rem;
+  /* left: -8rem; */
+}
+
+.sweets-and-count {
+  display: flex;
+}
+
+.sweets-count {
+  font-size: 0.7rem;
+}
+
+@keyframes updown {
+  12% {
+    transform: translateY(-47%);
+  }
+
+  25% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30%);
+  }
+
+  60% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-20%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.updown-anim {
+  animation: updown 1.5s ease-out;
+}
+

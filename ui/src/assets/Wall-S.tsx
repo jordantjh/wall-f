@@ -1,11 +1,11 @@
 import React from "react";
 import { RobotState } from "../enums";
 
-interface IWallFProps {
+interface IWallSProps {
    state: RobotState;
 }
 
-export const WallF: React.FunctionComponent<IWallFProps> = ({
+export const WallS: React.FunctionComponent<IWallSProps> = ({
    state
 }) => {
    const getColor = () => {

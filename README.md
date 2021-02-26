@@ -1,4 +1,4 @@
-# Wall-F: The Fruit-Picking Robot
+# Wall-S: The Fruit-Picking Robot
 
 Frontend technologies: React, TypeScript, HTML, CSS, JavaScript
 
@@ -8,9 +8,11 @@ Frontend technologies: React, TypeScript, HTML, CSS, JavaScript
    ```
    python -m venv myvenv
    ```
+   
 2. Activate the virtual environment<br/>
    Windows: _./myvenv/Scripts/activate_<br/>
    MacOS or Linux: _source myvenv/bin/activate_
+
 3. Install the project dependencies
    ```
    pip install -r requirements.txt
@@ -25,8 +27,8 @@ Frontend technologies: React, TypeScript, HTML, CSS, JavaScript
 
 ### Frontend
 1. Inside "ui" directory, execute in command line
-  ```
-  npm start
-  ```
+    ```
+    npm start
+    ```
 2. Visit http://localhost:3000 on your favourite web browser. 
 

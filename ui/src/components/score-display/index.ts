@@ -1,0 +1,1 @@
+export { ScoreDisplayRenderer as ScoreDisplay } from "./score-display-renderer";
